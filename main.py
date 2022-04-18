@@ -103,7 +103,6 @@ def train(model, train_loader, test_loader, device):
     epochs = [i for i in range(1, 51)]
     plt.plot(epochs, training_losses, "mediumseagreen", label="training_losses")
     plt.plot(epochs, test_losses, "mediumpurple", label="test_losses")
-    plt.xticks(epochs)
     plt.xlabel("epochs")
     plt.ylabel("loss")
     plt.savefig("losses.png")
@@ -111,7 +110,6 @@ def train(model, train_loader, test_loader, device):
 
     plt.plot(epochs, training_acc, "mediumseagreen", label="training_accuracy")
     plt.plot(epochs, test_acc, "mediumpurple", label="test_accuracy")
-    plt.xticks(epochs)
     plt.xlabel("epochs")
     plt.ylabel("accuracy")
     plt.savefig("accuracy.png")
@@ -119,7 +117,6 @@ def train(model, train_loader, test_loader, device):
 
     plt.plot(epochs, training_time, "mediumseagreen", label="training_time")
     plt.plot(epochs, test_time, "mediumpurple", label="test_time")
-    plt.xticks(epochs)
     plt.xlabel("epochs")
     plt.ylabel("time")
     plt.savefig("time.png")
